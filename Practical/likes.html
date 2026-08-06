@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        #likeContainer{
+            height: 600px;
+            width: 300px;
+           border:1px solid black;
+           border-radius: 10px;
+
+        }
+        img{
+            width: 100%;
+        }
+        #likeButton{
+           border:none;
+           background-color: transparent;
+           font-size: 50px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+  <div id="likeContainer">
+    <img src="https://images.pexels.com/photos/1715184/pexels-photo-1715184.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Description of the image" />
+     
+    <button id="likeButton">🤍 123</button> <span><h1 id="likeCount">123</h1></span>
+    
+
+
+  </div>
+
+
+  <script>
+    const likeButton=document.getElementById("likeButton");
+    const likeCount=document.getElementById("likeCount");
+    let likes=123;
+    let liked=false;
+
+
+likeButton.addEventListener("dblclick",function(){
+
+    if(liked==false){
+        likes++
+        likeButton.textContent="❤️"+ likes;
+       
+        liked=true
+
+    }else if(liked==true){
+        likes--
+        likeButton.textContent="🤍"+ likes;
+        liked=false
+    }
+})
+
+  </script>
+
+
+</body>
+</html>

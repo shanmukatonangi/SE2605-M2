@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="cartContainer">
+
+    </div>
+
+    <div id="productsContainer">
+
+    </div>
+
+
+    <button onclick="console.log('hello')">click me</button>
+
+
+    <script>
+        // let arr=[1,2,3,4,5,6,7,8,9]
+
+        // for(let i=0;i<arr.length;i++){
+        //     console.log(arr[i])
+
+        // }
+
+        let products=[
+            {
+                title:"Phone 14",
+                price:40000
+
+        },
+        {
+            title:"Phone 15",
+                price:50000
+        },{
+            title:"Phone 16",
+                price:60000
+        }
+    ]
+
+    let cart=[]
+
+    // for(let i=0;i<products.length;i++){
+    //     console.log(products[i].title)
+    // }
+
+    const productsContainer=document.getElementById("productsContainer")
+
+    products.forEach(function(product){
+
+      productsContainer.innerHTML+=`  <div class="productscards">
+            <h1>${product.title}</h1>
+            <p>${product.price}</p>
+            <button onclick="addtocart('${product.title}')">Add to cart</button>
+            
+        </div>`
+
+
+
+    })
+
+
+    function addtocart(title){
+        console.log("hello",title)
+        let cartproduct=products.find((product)=> product.title==title)
+        console.log(cartproduct)
+
+    }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

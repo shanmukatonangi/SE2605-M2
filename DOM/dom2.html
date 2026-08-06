@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        .on{
+            height: 300px;
+            width: 300px;
+            background-color: yellow
+        }
+
+        .off{
+            height: 300px;
+            width: 300px;
+            background-color: black
+        }
+
+
+        #myButton{
+            height: 50px;
+            width: 100px;
+            background-color: red;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>im h1</h1>
+
+    <img id="myImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz1CdOYAj8UU5pOGUdKy72YJNXwTaOeb17HYZuzqroJQ&s" alt="Description of the image" />
+    
+
+
+<div class="on">
+hi im div
+</div>
+
+<button id="myButton">Click Me</button>
+<h1>0</h1>
+
+<input id="myInput" type="text" placeholder="Type something..." />
+    <script>
+  
+        let myimg= document.getElementById("myImage")
+    // //    console.log(myimg.getAttribute("src"))
+    //myimg.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOLuquy4AZUD9BRDHIwxT1vxspku0TqXGjpjKlHilcDg&s=10")
+
+    // myimg.removeAttribute("src")
+
+
+    // let num=10;
+     let mydiv= document.querySelector(".on")
+
+    // if(num>5){
+    //     mydiv.classList.add("off")
+
+    // }
+
+    //DOM EVENTS
+
+    //Mouse events
+
+
+    //addEventlistener
+
+    let myButton= document.getElementById("myButton")
+   // mybutton.addEventListener(what kind of interaction,function)
+//    myButton.addEventListener("click",function(){
+//     console.log("button clicked")
+//     mydiv.style.backgroundColor="blue"
+//    })
+// myButton.addEventListener("dblclick",function(){
+//      mydiv.style.backgroundColor="blue"
+// })
+
+
+// mydiv.addEventListener("mouseover",function(){
+//     mydiv.style.backgroundColor="blue"
+//     myimg.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOLuquy4AZUD9BRDHIwxT1vxspku0TqXGjpjKlHilcDg&s=10")
+// })
+
+// mydiv.addEventListener("mouseout",function(){
+//     mydiv.style.backgroundColor="yellow"
+//     myimg.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz1CdOYAj8UU5pOGUdKy72YJNXwTaOeb17HYZuzqroJQ&s")
+// })
+
+// mydiv.addEventListener("mousemove",function(){
+//     console.log("mouse moved")
+// })
+
+//keyboard events
+
+let input= document.getElementById("myInput")
+
+// input.addEventListener("keydown",function(event){
+//     if(event.key==="Shift"){
+//         mydiv.style.backgroundColor="red"
+//     }
+//    if(event.key==="Enter"){
+//    mydiv.style.backgroundColor="blue"
+//    }
+// })
+
+input.addEventListener("keyup",function(event){
+    if(event.key==="Shift"){
+        mydiv.style.backgroundColor="red"
+    }
+    if(event.key==="Enter"){
+    mydiv.style.backgroundColor="blue"
+    }
+})
+
+
+
+
+
+
+    </script>
+</body>
+</html>

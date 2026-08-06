@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        hi im div
+    </div>
+
+    <div id="myDiv">hello im written in html</div>
+     <div id="myDiv">hello im written in html</div>
+      <div id="myDiv">hello im written in html</div>
+       <div id="myDiv">hello im written in html</div>
+        <div id="myDiv">hello im written in html</div>
+
+         <!-- <div id="myDiv"> <h1>im h1 inside div changed by js using queryselectorall</h1></div> -->
+        
+    
+
+    <p>im p1</p>
+    <p>im p2</p>
+    <p>im p3</p>
+
+    <h1 class="myH1">im h1</h1>
+    <h1 class="myH1">im h1 2nd</h1>
+
+
+    <div id="parentdiv">
+        <h1 id="childH1">im h1 inside div</h1>
+        <h2 id="childH2">im h2 inside div</h2>
+    </div>
+
+
+
+
+
+    <script>
+      let parentdiv=  document.querySelector("#parentdiv")
+      let childH1=  document.querySelector("#childH1")
+      let childH2=  document.querySelector("#childH2")
+
+      parentdiv.removeChild(childH2)
+
+
+        // console.log(document.body)
+
+        //getelementnyid
+
+//       let mydiv=  document.getElementById("myDiv")
+//       //mydiv = <div id="myDiv">hello im written in html</div>
+
+//       mydiv.innerText="im div info changed by js"
+
+//       //getelementbytagname
+
+//      let ptags= document.getElementsByTagName("p")
+//      console.log(ptags[1])
+
+//      //getelementbyclassname
+//        let myH1Tags= document.getElementsByClassName("myH1")
+// console.log(myH1Tags[1])
+
+//queryselector
+// let qsmyh1=document.querySelector("#myDiv")
+// console.log(qsmyh1)
+
+
+let qsmydiv=document.querySelectorAll("#myDiv")
+// let thirdindexwaladiv= qsmydiv[3]
+// thirdindexwaladiv.innerText="im div info changed by js using queryselectorall"
+
+// console.log(thirdindexwaladiv)
+
+// let fourthindexwaladiv= qsmydiv[4]
+// fourthindexwaladiv.innerHTML="<h1>im h1 inside div changed by js using queryselectorall</h1>"
+//            // <!-- <div id="myDiv"> <h1>im h1 inside div changed by js using queryselectorall</h1></div>
+
+
+    //dom menthods
+    //createelement
+
+  let newh3 =  document.createElement("h3")
+  newh3.innerText="im h3 created by js"
+
+  newh3.style.color="blue"
+  newh3.style.fontSize="30px"
+
+  //background-color:"red"
+  newh3.style.backgroundColor="red"
+   
+//    document.body.appendChild(newh3)
+qsmydiv[0].appendChild(newh3)
+
+
+
+
+   </script>
+    
+</body>
+</html>
