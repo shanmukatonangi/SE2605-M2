@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        #cartContainer{
+            height: 400px;
+            width: 800px;
+            border:2px solid black;
+            margin: auto;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -9,16 +17,14 @@
 
 
     <div id="cartContainer">
-
     </div>
-
     <div id="productsContainer">
-
     </div>
+    <!-- <button onclick="console.log('hello')">click me</button> -->
 
-
-    <button onclick="console.log('hello')">click me</button>
-
+    <div>
+        <h1>hello h1</h1>
+    </div>
 
     <script>
         // let arr=[1,2,3,4,5,6,7,8,9]
@@ -50,18 +56,15 @@
     // }
 
     const productsContainer=document.getElementById("productsContainer")
+    const cartcontainer=document.getElementById("cartContainer")
 
     products.forEach(function(product){
-
       productsContainer.innerHTML+=`  <div class="productscards">
             <h1>${product.title}</h1>
             <p>${product.price}</p>
             <button onclick="addtocart('${product.title}')">Add to cart</button>
             
         </div>`
-
-
-
     })
 
 
@@ -69,10 +72,39 @@
         console.log("hello",title)
         let cartproduct=products.find((product)=> product.title==title)
         console.log(cartproduct)
+        cart.push(cartproduct)
+        console.log(cart)
+
+        showcart()
+    }
+
+    function showcart(){
+        cartcontainer.innerHTML=""
+        cart.forEach(function(product){
+            cartcontainer.innerHTML+=` <div class="productscards">
+            <h1>${product.title}</h1>
+            <p>${product.price}</p>
+           
+            
+        </div>`
+        })
 
     }
 
+    
 
+
+
+    
+
+
+    // let num=10
+
+    // for(i=0;i<4;i++){
+    //      num = num+1 =10+1 =11
+    //      console.log(num)
+    // } //11 12 13
+   
 
 
 
