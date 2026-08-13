@@ -389,11 +389,11 @@ let secondsetproducts=[
 
 
     function addtocart(title){
-        console.log("hello",title)
-        let cartproduct=products.find((product)=> product.title==title)
+        
+        let cartproduct=products.find((product)=> product.title==title)   //={name:"laptop"}
         console.log(cartproduct)
         cart.push(cartproduct)
-        console.log(cart)
+        
 
         showcart()
     }

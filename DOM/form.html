@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form>
+
+    <input id="emailbox" type="email" placeholder="Enter email">
+
+
+     <input id="phonebox" type="tel" placeholder="Enter phone">
+
+     <input id="username" type="text" placeholder="enter name">
+
+     <input id="password" type="password" placeholder="Enter password">
+<input id="checkbox" type="checkbox">
+     <p id="warning"></p>
+
+     <button id="submitbutton" type="submit">submit</button>
+
+
+
+</form>
+
+
+<script>
+
+    let emailbox=document.getElementById("emailbox")
+    let phonebox=document.getElementById("phonebox")
+    let username=document.getElementById("username")
+    let password=document.getElementById("password")
+    let submitbutton=document.getElementById("submitbutton")
+    let warning=document.getElementById("warning")
+    let form=document.querySelector("form")
+    let checkbox=document.getElementById("checkbox")
+
+    form.addEventListener("submit",function(e){
+        e.preventDefault()
+        
+        if(emailbox.value==""){
+            warning.innerText="Email is missing"
+
+        }
+         if(phonebox.value==""){
+            warning.innerText="Phine num is missing"
+
+        }
+         if(username.value==""){
+            warning.innerText="Username is missing"
+
+        }
+         if(password.value==""){
+            warning.innerText="password is missing"
+
+        }
+        if(!checkbox.checked){
+            warning.innerText="please accept terms and conditions"
+
+        }
+
+
+
+
+    })
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
